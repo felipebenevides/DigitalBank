@@ -1,0 +1,68 @@
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\aws-beanstalk-tools-defaults.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.exe
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.deps.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.runtimeconfig.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.runtimeconfig.dev.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.pdb
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Infrastructure.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csprojAssemblyReference.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.AssemblyInfoInputs.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.AssemblyInfo.cs
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csproj.CoreCompileInputs.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.MvcApplicationPartsAssemblyInfo.cs
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.MvcApplicationPartsAssemblyInfo.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.RazorTargetAssemblyInfo.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csproj.CopyComplete
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\staticwebassets\APIApp.StaticWebAssets.Manifest.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\staticwebassets\APIApp.StaticWebAssets.xml
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.pdb
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.genruntimeconfig.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\aws-beanstalk-tools-defaults.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.exe
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.deps.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.runtimeconfig.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.runtimeconfig.dev.json
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\APIApp.pdb
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Infrastructure.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csprojAssemblyReference.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.AssemblyInfoInputs.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.AssemblyInfo.cs
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csproj.CoreCompileInputs.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.MvcApplicationPartsAssemblyInfo.cs
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.MvcApplicationPartsAssemblyInfo.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.RazorTargetAssemblyInfo.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.csproj.CopyComplete
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\staticwebassets\APIApp.StaticWebAssets.Manifest.cache
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\staticwebassets\APIApp.StaticWebAssets.xml
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.dll
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.pdb
+E:\Users\Felipe Benevides\Documents\DigitalBank\DigitalBankApi\DigitalBank.Backend\APIApp\obj\Debug\netcoreapp3.1\APIApp.genruntimeconfig.cache

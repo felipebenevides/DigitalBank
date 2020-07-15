@@ -1,0 +1,8 @@
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\bin\Debug\netcoreapp3.1\Application.deps.json
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\bin\Debug\netcoreapp3.1\Application.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\bin\Debug\netcoreapp3.1\Application.pdb
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\obj\Debug\netcoreapp3.1\Application.dll
+E:\Users\Felipe Benevides\Documents\Consertae Tudo\Projeto\ConsertaeApi\Consertae.Backend\Application\obj\Debug\netcoreapp3.1\Application.pdb
