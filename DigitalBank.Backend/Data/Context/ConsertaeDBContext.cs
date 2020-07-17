@@ -1,4 +1,5 @@
 ﻿using Data.Extensions;
+using Data.Mappings;
 //using Data.Mapping;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -11,13 +12,21 @@ namespace Data.Context
     {
         public ConsertaeDBContext(DbContextOptions options) : base(options)
         {
-            //Database.ExecuteSqlCommand("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
         }
+
+        public DbSet<Card> Card { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<CustomerHistoryTransaction> CustomerHistoryTransaction { get; set; }
+        public DbSet<HistoryTransaction> HistoryTransaction { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-            //modelBuilder.ApplyConfiguration(new ParticipantPushTokenMapping());
+            modelBuilder.ApplyConfiguration(new CardMap());
+            modelBuilder.ApplyConfiguration(new CustomerHistoryTransactionMap());
+            modelBuilder.ApplyConfiguration(new CustomerMap());
+            modelBuilder.ApplyConfiguration(new HistoryTransactionMap());
 
             modelBuilder.Seed();
 
