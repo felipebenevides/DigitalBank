@@ -16,9 +16,13 @@ namespace Data.Mappings
             builder.Property(x => x.ValidateCard).HasMaxLength(5);
             builder.Property(x => x.PrintedNameCard).HasMaxLength(25);
 
-            builder.HasOne(x => x.Customer)
+            builder.HasOne(x => x.PhisicalPerson)
                .WithOne(x => x.Card)
-               .HasForeignKey<Customer>(x => x.Id);
+               .HasForeignKey<PhysicalPerson>(x => x.Id);
+
+            builder.HasOne(x => x.LegalPerson)
+            .WithOne(x => x.Card)
+            .HasForeignKey<LegalPerson>(x => x.Id);
 
         }
     }

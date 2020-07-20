@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "APIApp": {
+    "DigitalBank Api Develop": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "",

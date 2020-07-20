@@ -9,9 +9,13 @@ namespace Data.Mappings
     {
         public void Configure(EntityTypeBuilder<CustomerHistoryTransaction> builder)
         {
-            builder.HasOne(x => x.Customer)
+            builder.HasOne(x => x.PhysicalPerson)
                 .WithMany(x => x.CustomerHistoryTransactions)
                 .HasForeignKey(x => x.Id);
+
+            builder.HasOne(x => x.LegalPerson)
+            .WithMany(x => x.CustomerHistoryTransactions)
+            .HasForeignKey(x => x.Id);
 
             builder.HasOne(x => x.HistoryTransaction)
                 .WithMany(x => x.CustomerHistoryTransactions)

@@ -5,7 +5,8 @@ namespace Domain.Entities
 {
     public class CustomerHistoryTransaction : BaseEntity
     {
-        public virtual Customer Customer { get; set; }
+        public virtual PhysicalPerson PhysicalPerson { get; set; }
+        public virtual LegalPerson LegalPerson { get; set; }
         public virtual HistoryTransaction HistoryTransaction { get; set; }
     }
 }

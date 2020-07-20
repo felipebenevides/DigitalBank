@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,12 +14,22 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-
+using Microsoft.EntityFrameworkCore;
+using Domain.Service;
+using Domain.Interfaces.Service;
+using Application.Interfaces;
+using Application.Application;
+using Domain.Interfaces.Repository;
+using Data.Repository;
+using AutoMapper;
+using Application.AutoMapper;
+using APIApp.Configurations;
 
 namespace APIApp
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,25 +37,75 @@ namespace APIApp
 
         public IConfiguration Configuration { get; }
 
+       
+
+        public Startup(IHostEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
+
+            if (env.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DigitalBank API Beta", Version = "v0.0.0.1" });
-
-
-                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                //c.IncludeXmlComments(xmlPath);
-
             });
+
+
+
+            //AutoMapper Settings
+            services.AddAutoMapperConfiguration();
+
+            // Setting DBContexts
+            services.AddDatabaseConfiguration(Configuration);
+
+            //services.AddDbContext<DigitalBankDBContext>();
+
+            #region Dependency Injection
+
+            #region Application Services
+            services.AddScoped<ILegalPersonAppService, LegalPersonAppService>();
+            services.AddScoped<IPhysicalPersonAppService, PhysicalPersonAppService>();
+            services.AddScoped<ITransactionAppService, TransactionAppService>();
+            #endregion
+
+            #region Services
+            services.AddTransient<ILegalPersonService, LegalPersonService>();
+            services.AddTransient<IPhysicalPersonService, PhysicalPersonService>();
+            services.AddTransient<IHistoryTransactionService, HistoryTransactionService>();
+            #endregion
+
+            #region Repositories
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<ILegalPersonRepository, LegalPersonRepository>();
+            services.AddTransient<IPhysicalPersonRepository, PhysicalPersonRepository>();
+            services.AddTransient<IHistoryTransactionRepository, HistoryTransactionRepository>();
+            services.AddTransient<ICustomerHistoryTransactionRepository, CustomerHistoryTransactionRepository>();
+
+            #endregion
+
+            services.AddScoped<DigitalBankDBContext>();
+
+
+
+
+
+            #endregion
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -55,6 +116,13 @@ namespace APIApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
 
             app.UseAuthorization();
 
@@ -70,5 +138,7 @@ namespace APIApp
                 c.RoutePrefix = string.Empty;
             });
         }
+
+   
     }
 }

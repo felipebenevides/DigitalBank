@@ -12,7 +12,8 @@ namespace Domain.Entities
         public bool Inactive { get; set; }
         public DateTime InactiveDate { get; set; }
 
-        public virtual Customer Customer { get; set; }
+        public virtual PhysicalPerson PhisicalPerson { get; set; }
+        public virtual LegalPerson LegalPerson { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? ModifyDate { get; set; }

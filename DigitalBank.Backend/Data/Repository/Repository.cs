@@ -11,10 +11,10 @@ namespace Data.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        protected readonly ConsertaeDBContext _context;
+        protected readonly DigitalBankDBContext _context;
         protected DbSet<TEntity> DbSet;
 
-        public Repository(ConsertaeDBContext context)
+        public Repository(DigitalBankDBContext context)
         {
             _context = context;
             DbSet = context.Set<TEntity>();
@@ -73,6 +73,11 @@ namespace Data.Repository
         private void SaveChanges()
         {
             _context.SaveChanges();
-        }     
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
     }
 }
