@@ -11,7 +11,8 @@ namespace Domain.Entities
         public DateTime TransactionDate { get; set; }
         public EPaymentType PaymentType { get; set; }
 
-        public IList<CustomerHistoryTransaction> CustomerHistoryTransactions { get; set; }
+        public virtual ICollection<LegalPersonHistoryTransaction> LegalPersonHistoryTransaction { get; set; }
+        public virtual ICollection<PhysicalPersonHistoryTransaction> PhysicalPersonHistoryTransaction { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? ModifyDate { get; set; }

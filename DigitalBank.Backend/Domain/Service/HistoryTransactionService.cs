@@ -12,17 +12,58 @@ namespace Domain.Service
     public class HistoryTransactionService : IHistoryTransactionService
     {
         private readonly IHistoryTransactionRepository _transactionRepository;
-        public HistoryTransactionService(IHistoryTransactionRepository transactionRepository)
+        private readonly ILegalPersonRepository _legalPersonRepository;
+        private readonly IPhysicalPersonRepository _physicalPersonRepository;
+
+        public HistoryTransactionService(IHistoryTransactionRepository transactionRepository,
+                                         ILegalPersonRepository legalPersonRepositor,
+                                         IPhysicalPersonRepository physicalPersonRepository
+                                         )
         {
             _transactionRepository = transactionRepository;
+            _physicalPersonRepository = physicalPersonRepository;
+            _legalPersonRepository = legalPersonRepositor;
         }
+
         public void AddBulk(IEnumerable<HistoryTransaction> entities)
         {
             _transactionRepository.AddBulk(entities);
         }
 
+        private bool ValidateTransaction()
+        {
+            return true;
+        }
+
+
+
+        private decimal CalcPercent(decimal currentValue, int percent)
+        {
+            double calcPercent = ((double)percent / 100) * 300;
+            decimal newCurrentValue = currentValue - (decimal)calcPercent;
+            return newCurrentValue;
+        }
+
+        private decimal ApplyDiscount(decimal currentValue, EAccountType enAccountType)
+        {
+            decimal newCurrentValue = 0;
+            
+            switch (enAccountType)
+            {
+                case EAccountType.ContaCorrente:
+                    newCurrentValue = CalcPercent(currentValue, 2);
+                    break;
+                case EAccountType.ContaEmpresarial:
+                    newCurrentValue = CalcPercent(currentValue, 5);
+                    break;
+            }
+
+            return newCurrentValue;
+
+        }
         public void AddOrUpdate(HistoryTransaction entity)
         {
+            //entity.Amount = ApplyDiscount(entity.Amount, entity.CustomerHistoryTransactions.Select(s => s.LegalPerson.AccountType).FirstOrDefault());
             _transactionRepository.AddOrUpdate(entity);
         }
 

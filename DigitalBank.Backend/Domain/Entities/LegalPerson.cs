@@ -6,6 +6,7 @@ namespace Domain.Entities
 {
     public class LegalPerson : BaseEntity, ITrackableEntity
     {
+        public Guid AccountID { get; set; }
         public string CompanyName { get; set; }
         public string CNPJ { get; set; }
         public string Telephone { get; set; }
@@ -20,8 +21,8 @@ namespace Domain.Entities
         public DateTime DateInative { get; set; }
         public bool Deleted { get; set; }
 
-        public virtual Card Card { get; set; }
-        public virtual IList<CustomerHistoryTransaction> CustomerHistoryTransactions { get; set; }
+        public virtual Account Account { get; set; }
+        public virtual ICollection<LegalPersonHistoryTransaction> LegalPersonHistoryTransaction { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? ModifyDate { get; set; }

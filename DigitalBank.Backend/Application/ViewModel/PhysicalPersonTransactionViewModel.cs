@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Application.ViewModel
 {
-    public class CustomerHistoryTransactionViewModel
+    public class PhysicalPersonTransactionViewModel
     {
     }
 }

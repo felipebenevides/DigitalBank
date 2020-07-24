@@ -20,6 +20,10 @@ namespace Data.Mappings
             builder.Property(x => x.Email).HasMaxLength(50);
             builder.Property(x => x.DigitalPassword).HasMaxLength(150);
             builder.Property(x => x.Gender).HasMaxLength(10);
+
+            builder.HasOne(x => x.Account)
+               .WithOne(x => x.PhisicalPerson)
+               .HasForeignKey<Account>(x => x.PhisicalPersonID);
         }
     }
 }

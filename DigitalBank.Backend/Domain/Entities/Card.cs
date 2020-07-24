@@ -1,5 +1,4 @@
-﻿using Domain.Enum;
-using System;
+﻿using System;
 
 namespace Domain.Entities
 {
@@ -11,9 +10,8 @@ namespace Domain.Entities
         public string PrintedNameCard { get; set; }
         public bool Inactive { get; set; }
         public DateTime InactiveDate { get; set; }
-
-        public virtual PhysicalPerson PhisicalPerson { get; set; }
-        public virtual LegalPerson LegalPerson { get; set; }
+        public Guid AccountID { get; set; }
+        public virtual Account Account { get; set; }
 
         public DateTime CreateDate { get; set; }
         public DateTime? ModifyDate { get; set; }

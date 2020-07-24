@@ -21,18 +21,20 @@ namespace Data.Context
             base.OnConfiguring(optionsBuilder);
         }
 
+        public DbSet<Account> Account { get; set; }
         public DbSet<Card> Card { get; set; }
         public DbSet<PhysicalPerson> PhysicalPerson { get; set; }
         public DbSet<LegalPerson> LegalPerson { get; set; }
-        public DbSet<CustomerHistoryTransaction> CustomerHistoryTransaction { get; set; }
+        public DbSet<LegalPersonHistoryTransaction> CustomerHistoryTransaction { get; set; }
         public DbSet<HistoryTransaction> HistoryTransaction { get; set; }
 
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new AccountMap());
             modelBuilder.ApplyConfiguration(new CardMap());
-            modelBuilder.ApplyConfiguration(new CustomerHistoryTransactionMap());
+            modelBuilder.ApplyConfiguration(new LegalPersonHistoryTransactionMap());
             modelBuilder.ApplyConfiguration(new LegalPersonMap());
             modelBuilder.ApplyConfiguration(new HistoryTransactionMap());
 

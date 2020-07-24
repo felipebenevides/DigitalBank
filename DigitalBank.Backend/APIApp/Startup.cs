@@ -77,9 +77,9 @@ namespace APIApp
             #region Dependency Injection
 
             #region Application Services
-            services.AddScoped<ILegalPersonAppService, LegalPersonAppService>();
-            services.AddScoped<IPhysicalPersonAppService, PhysicalPersonAppService>();
-            services.AddScoped<ITransactionAppService, TransactionAppService>();
+            services.AddTransient<ILegalPersonAppService, LegalPersonAppService>();
+            services.AddTransient<IPhysicalPersonAppService, PhysicalPersonAppService>();
+            services.AddTransient<ITransactionAppService, TransactionAppService>();
             #endregion
 
             #region Services
@@ -98,11 +98,7 @@ namespace APIApp
             #endregion
 
             services.AddScoped<DigitalBankDBContext>();
-
-
-
-
-
+            
             #endregion
         }
 

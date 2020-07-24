@@ -2,7 +2,7 @@
 
 namespace Domain.Interfaces.Repository
 {
-    public interface ICustomerHistoryTransactionRepository: IRepository<CustomerHistoryTransaction>
+    public interface ICustomerHistoryTransactionRepository: IRepository<LegalPersonHistoryTransaction>
     {
     }
 }

@@ -20,34 +20,34 @@ namespace APIApp.Controllers
             _legalPersonAppService = legalPersonAppService;
         }
 
-        //[HttpGet("/Register")]
-        //public async Task<IActionResult> Register()
-        //{
-        //    try
-        //    {
-        //        var result = _legalPersonAppService.GetAllAsync();
-        //        return Ok(result);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, ex.StackTrace);
-        //    }
-        //}
+        [HttpGet("/Register")]
+        public async Task<IActionResult> Register()
+        {
+            try
+            {
+                var result = await _legalPersonAppService.GetAllAsync();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.StackTrace);
+            }
+        }
 
-        //[HttpPost("/Register")]
-        //public async Task<IActionResult> Register(LegalPersonViewModel model)
-        //{
-        //    try
-        //    {
-        //        _legalPersonAppService.AddOrUpdate(model);
-        //        return Ok(true);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, ex.StackTrace);
-        //    }
+        [HttpPost("/Register")]
+        public async Task<IActionResult> Register(LegalPersonViewModel model)
+        {
+            try
+            {
+                _legalPersonAppService.AddOrUpdate(model);
+                return Ok(true);
+            }
+             catch (Exception ex)
+            {
+                return StatusCode(500, ex.StackTrace);
+            }
 
-        //}
+        }
 
 
     }

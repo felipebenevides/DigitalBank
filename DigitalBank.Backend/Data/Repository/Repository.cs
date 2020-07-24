@@ -50,7 +50,8 @@ namespace Data.Repository
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await DbSet.ToListAsync();
+            var result = await DbSet.ToListAsync();
+            return result;
         }
 
         public TEntity GetById(Guid id)

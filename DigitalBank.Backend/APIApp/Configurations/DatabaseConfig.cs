@@ -18,7 +18,7 @@ namespace APIApp.Configurations
             if (services == null) throw new ArgumentNullException(nameof(services));
 
             services.AddDbContext<DigitalBankDBContext>((serviceProvider, options) => {
-                options.UseMySql(configuration.GetConnectionString("DIGITALBANKDB"));
+                options.UseMySql(configuration.GetConnectionString("DIGITALBANKDB"), providerOptions => providerOptions.EnableRetryOnFailure());
             });
         }
     }

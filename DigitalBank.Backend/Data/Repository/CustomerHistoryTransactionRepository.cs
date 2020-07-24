@@ -4,7 +4,7 @@ using Domain.Interfaces.Repository;
 
 namespace Data.Repository
 {
-    public class CustomerHistoryTransactionRepository:  Repository<CustomerHistoryTransaction>, ICustomerHistoryTransactionRepository
+    public class CustomerHistoryTransactionRepository:  Repository<LegalPersonHistoryTransaction>, ICustomerHistoryTransactionRepository
     {
         private readonly DigitalBankDBContext _digitalBankDBContext;
         public CustomerHistoryTransactionRepository(DigitalBankDBContext ctx): base(ctx)

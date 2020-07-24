@@ -17,10 +17,51 @@ namespace Data.Migrations
                 .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Domain.Entities.Account", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<int>("AccountType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Agency")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("BankAccount")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<decimal>("BankBalance")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<Guid>("CardID")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("LegalPersonID")
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime?>("ModifyDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<Guid?>("PhisicalPersonID")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Account");
+                });
+
             modelBuilder.Entity("Domain.Entities.Card", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("AccountID")
                         .HasColumnType("char(36)");
 
                     b.Property<string>("CardNumber")
@@ -53,17 +94,10 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AccountID")
+                        .IsUnique();
+
                     b.ToTable("Card");
-                });
-
-            modelBuilder.Entity("Domain.Entities.CustomerHistoryTransaction", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("char(36)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CustomerHistoryTransaction");
                 });
 
             modelBuilder.Entity("Domain.Entities.HistoryTransaction", b =>
@@ -99,6 +133,10 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.Entities.LegalPerson", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("AccountID")
                         .HasColumnType("char(36)");
 
                     b.Property<int>("AccountType")
@@ -149,7 +187,31 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("AccountID")
+                        .IsUnique();
+
                     b.ToTable("LegalPerson");
+                });
+
+            modelBuilder.Entity("Domain.Entities.LegalPersonHistoryTransaction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("HistoryTransactionID")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("LegalPersonID")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HistoryTransactionID");
+
+                    b.HasIndex("LegalPersonID");
+
+                    b.ToTable("CustomerHistoryTransaction");
                 });
 
             modelBuilder.Entity("Domain.Entities.PhysicalPerson", b =>
@@ -157,8 +219,8 @@ namespace Data.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("char(36)");
 
-                    b.Property<int>("AccountType")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AccountID")
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("CPF")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -213,41 +275,80 @@ namespace Data.Migrations
                     b.ToTable("PhysicalPerson");
                 });
 
-            modelBuilder.Entity("Domain.Entities.CustomerHistoryTransaction", b =>
+            modelBuilder.Entity("Domain.Entities.PhysicalPersonHistoryTransaction", b =>
                 {
-                    b.HasOne("Domain.Entities.HistoryTransaction", "HistoryTransaction")
-                        .WithMany("CustomerHistoryTransactions")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
 
-                    b.HasOne("Domain.Entities.LegalPerson", "LegalPerson")
-                        .WithMany("CustomerHistoryTransactions")
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<Guid>("HistoryTransactionID")
+                        .HasColumnType("char(36)");
 
-                    b.HasOne("Domain.Entities.PhysicalPerson", "PhysicalPerson")
-                        .WithMany("CustomerHistoryTransactions")
-                        .HasForeignKey("Id")
+                    b.Property<Guid>("PhysicalPersonID")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HistoryTransactionID");
+
+                    b.HasIndex("PhysicalPersonID");
+
+                    b.ToTable("PhysicalPersonHistoryTransaction");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Card", b =>
+                {
+                    b.HasOne("Domain.Entities.Account", "Account")
+                        .WithOne("Card")
+                        .HasForeignKey("Domain.Entities.Card", "AccountID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Entities.LegalPerson", b =>
                 {
-                    b.HasOne("Domain.Entities.Card", "Card")
+                    b.HasOne("Domain.Entities.Account", "Account")
                         .WithOne("LegalPerson")
-                        .HasForeignKey("Domain.Entities.LegalPerson", "Id")
+                        .HasForeignKey("Domain.Entities.LegalPerson", "AccountID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.LegalPersonHistoryTransaction", b =>
+                {
+                    b.HasOne("Domain.Entities.HistoryTransaction", "HistoryTransaction")
+                        .WithMany("LegalPersonHistoryTransaction")
+                        .HasForeignKey("HistoryTransactionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.LegalPerson", "LegalPerson")
+                        .WithMany("LegalPersonHistoryTransaction")
+                        .HasForeignKey("LegalPersonID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("Domain.Entities.PhysicalPerson", b =>
                 {
-                    b.HasOne("Domain.Entities.Card", "Card")
+                    b.HasOne("Domain.Entities.Account", "Account")
                         .WithOne("PhisicalPerson")
                         .HasForeignKey("Domain.Entities.PhysicalPerson", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.PhysicalPersonHistoryTransaction", b =>
+                {
+                    b.HasOne("Domain.Entities.HistoryTransaction", "HistoryTransaction")
+                        .WithMany("PhysicalPersonHistoryTransaction")
+                        .HasForeignKey("HistoryTransactionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.PhysicalPerson", "PhysicalPerson")
+                        .WithMany("PhysicalPersonHistoryTransaction")
+                        .HasForeignKey("PhysicalPersonID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
